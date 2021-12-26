@@ -1,82 +1,44 @@
 <!-- Headings -->
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
-
-<!-- Italics -->
-*This text* is italic
-
-_This text_ is italic
-
-<!-- Strong -->
-**This text** is italic
-
-__This text__ is italic
-
-<!-- Strikethrough -->
-~~This text~~ is strikethrough
-
-<!-- Horizontal Rule -->
-
----
+# Trackify
 ___
+🙂
+A Trello Clone - Built with React, Redux, Express, and MongoDB.
 
-<!-- Blockquote -->
-> This is a quote
-
-<!-- Links -->
-[Traversy Media](http://www.traversymedia.com)
-
-[Traversy Media](http://www.traversymedia.com "Traversy Media")
-
-<!-- UL -->
-* Item 1
-* Item 2
-* Item 3
-  * Nested Item 1
-  * Nested Item 2
-
-<!-- OL -->
-1. Item 1
-1. Item 2
-1. Item 3
-
-<!-- Inline Code Block -->
-`<p>This is a paragraph</p>`
-
-<!-- Images -->
-![Markdown Logo](https://markdown-here.com/img/icon256.png)
-
-<!-- Github Markdown -->
-
-<!-- Code Blocks -->
-```bash
-  npm install
-
-  npm start
+🔥 
+## features
+___
+* [x] User register and Login
+* [x] User Authentication
+* [ ] Dashboard Admin
+* [x] Create, Modify and Delete boards
+* [x] Create, Modify and Delete lists on board
+* [x] Create, Modify and Delete array of cards on lists
+* [x] Move card items within lists
+* [x] Move card items across lists
+* [ ] Notification log with active timestamps for each user events
+* [ ] Customize background images or color for individual boards
+* [ ] assign user to a specific cards
+* [ ] Ability to comment on card(task)
+🧰
+## Installing
+1. Clone the Repository
+```
+  git clone https://github.com/KhalilBenMansour/Trackify.git 
+  cd trackify
+```
+1. Install dependencies
+```
+  npm i && cd client npm i
+```
+1. Create .env file
+```
+  MONGO_URI="your mongoDb atlas"
+  PORT=5000
+  secretOrKey="your secret key"
+```
+1. Run the Project
+```
+  npm run dev
 ```
 
-```javascript
-  function add(num1, num2) {
-    return num1 + num2;
-  }
-```
 
-```python
-  def add(num1, num2):
-    return num1 + num2
-```
-
-<!-- Tables -->
-| Name     | Email          |
-| -------- | -------------- |
-| John Doe | john@gmail.com |
-| Jane Doe | jane@gmail.com |
-
-<!-- Task List -->
-* [x] Task 1
-* [x] Task 2
-* [ ] Task 3
