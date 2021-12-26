@@ -3,7 +3,7 @@
 🙂
 A Trello Clone - Built with React, Redux, Express, and MongoDB.
 ---
-🔥 ## features
+## features 🔥 
 * [x] User register and Login
 * [x] User Authentication
 * [ ] Dashboard Admin
@@ -17,7 +17,7 @@ A Trello Clone - Built with React, Redux, Express, and MongoDB.
 * [ ] assign user to a specific cards
 * [ ] Ability to comment on card(task)
 ---
-🧰 ## Installing
+## Installing 🧰
 1. Clone the Repository
 ```
   git clone https://github.com/KhalilBenMansour/Trackify.git 
@@ -37,3 +37,4 @@ A Trello Clone - Built with React, Redux, Express, and MongoDB.
 ```
   npm run dev
 ```
+___
