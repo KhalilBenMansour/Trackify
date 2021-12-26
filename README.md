@@ -1,12 +1,9 @@
 <!-- Headings -->
 # Trackify
-___
 🙂
 A Trello Clone - Built with React, Redux, Express, and MongoDB.
-
-🔥 
-## features
-___
+---
+🔥 ## features
 * [x] User register and Login
 * [x] User Authentication
 * [ ] Dashboard Admin
@@ -19,8 +16,8 @@ ___
 * [ ] Customize background images or color for individual boards
 * [ ] assign user to a specific cards
 * [ ] Ability to comment on card(task)
-🧰
-## Installing
+---
+🧰 ## Installing
 1. Clone the Repository
 ```
   git clone https://github.com/KhalilBenMansour/Trackify.git 
@@ -40,5 +37,3 @@ ___
 ```
   npm run dev
 ```
-
-
