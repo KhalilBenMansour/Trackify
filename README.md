@@ -3,7 +3,7 @@
 🙂
 A Trello Clone - Built with React, Redux, Express, and MongoDB.
 ---
-## features 🔥 
+## Features 🔥 
 * [x] User register and Login
 * [x] User Authentication
 * [ ] Dashboard Admin
