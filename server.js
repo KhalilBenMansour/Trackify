@@ -1,0 +1,28 @@
+require("dotenv").config();
+const express = require("express");
+const connectDB = require("./config/connectDB");
+const app = express();
+const users = require("./routes/user");
+const boards = require("./routes/board");
+const lists = require("./routes/list");
+
+const notifications = require("./routes/notification");
+const passport = require("passport");
+const cors = require("cors");
+
+app.use(passport.initialize());
+app.use(express.json());
+app.use(cors());
+connectDB();
+
+app.use("/api/users", users);
+app.use("/api/boards", boards);
+app.use("/api/lists", lists);
+app.use("/api/notifications", notifications);
+
+const port = process.env.PORT || 7000;
+app.listen(port, (err) => {
+  err
+    ? console.log(err)
+    : console.log(`the server is running on port http://localhost:${port}`);
+});

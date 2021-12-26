@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^6.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.14",
+    "passport": "^0.5.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"nodemon server\" \"cd client && npm start\" "
+  },
+  "name": "trackify",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
