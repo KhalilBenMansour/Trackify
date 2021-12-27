@@ -9,13 +9,6 @@ const notifications = require("./routes/notification");
 const passport = require("passport");
 const cors = require("cors");
 
-const aws = require("aws-sdk");
-
-let s3 = new aws.S3({
-  accessKeyId: process.env.S3_KEY,
-  secretAccessKey: process.env.S3_SECRET,
-});
-
 app.use(passport.initialize());
 app.use(express.json());
 app.use(cors());
