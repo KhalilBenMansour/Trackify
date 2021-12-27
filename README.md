@@ -41,6 +41,9 @@ ___
 ## ER DIAGRAM 💹
 ![Blank diagram](https://user-images.githubusercontent.com/89579585/147464763-05a91cc8-b02e-4884-9322-45dc4ad7ce57.png)
 ___
+## Use Case DIAGRAM 📑
+![Blank diagram](https://user-images.githubusercontent.com/89579585/147467095-52884b9c-4504-4ec3-9e68-a2ad2a52c82f.png)
+___
 ## Build With 🏗️
 ### Frontend
 * [React](https://fr.reactjs.org/) - A JavaScript library for building user interfaces
@@ -57,3 +60,4 @@ ___
 * [Jsonwebtoken](https://jwt.io/) - Decode, verify and generate JWT.
 * [bcryptjs](https://www.npmjs.com/package/bcryptjs) - Password hashing algorithm library
 * [passportjs](https://www.passportjs.org/) - Algorithm of security
+____
