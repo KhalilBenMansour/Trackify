@@ -23,17 +23,17 @@ A Trello Clone - Built with React, Redux, Express, and MongoDB.
   git clone https://github.com/KhalilBenMansour/Trackify.git 
   cd trackify
 ```
-1. Install dependencies
+2. Install dependencies
 ```
   npm i && cd client npm i
 ```
-1. Create .env file
+3. Create .env file
 ```
   MONGO_URI="your mongoDb atlas"
   PORT=5000
   secretOrKey="your secret key"
 ```
-1. Run the Project
+4. Run the Project
 ```
   npm run dev
 ```
