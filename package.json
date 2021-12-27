@@ -15,6 +15,9 @@
     "start": "node server.js",
     "dev": "concurrently \"nodemon server\" \"cd client && npm start\" "
   },
+  "engines": {
+    "node": "16.13.0"
+  },
   "name": "trackify",
   "version": "1.0.0",
   "main": "server.js",
