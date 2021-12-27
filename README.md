@@ -39,5 +39,6 @@ A Trello Clone - Built with React, Redux, Express, and MongoDB.
 ```
 ___
 ## ER DIAGRAM 💹
-file![Blank diagram](https://user-images.githubusercontent.com/89579585/147464763-05a91cc8-b02e-4884-9322-45dc4ad7ce57.png)
+![Blank diagram](https://user-images.githubusercontent.com/89579585/147464763-05a91cc8-b02e-4884-9322-45dc4ad7ce57.png)
+___
 
