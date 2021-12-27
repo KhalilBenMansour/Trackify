@@ -38,3 +38,5 @@ A Trello Clone - Built with React, Redux, Express, and MongoDB.
   npm run dev
 ```
 ___
+## ER DIAGRAM 💹
+![entity relationship diagram](file:///C:/Users/win10/Desktop/Blank%20diagram.svg)
