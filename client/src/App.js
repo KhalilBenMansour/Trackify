@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProfile } from "./JS/actions/userAction";
 import Boards from "./components/Boards";
 import Board from "./components/Board";
+import NotFound from "./components/NotFound";
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ function App() {
           <Route path="" element={<Boards />} />
           <Route path="/boards/:id" element={<Board />} />
         </Route>
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </div>
   );

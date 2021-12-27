@@ -20,6 +20,14 @@ app.use("/api/boards", boards);
 app.use("/api/lists", lists);
 app.use("/api/notifications", notifications);
 
+app.all("*", (req, res, next) => {
+  res.status(404).json({
+    status: "false",
+    message: "page not found",
+  });
+  next();
+});
+
 const port = process.env.PORT || 7000;
 app.listen(port, (err) => {
   err
