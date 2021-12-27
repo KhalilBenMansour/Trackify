@@ -12,6 +12,9 @@
     "passport-jwt": "^4.0.0"
   },
   "scripts": {
+    "built": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node server.js",
     "dev": "concurrently \"nodemon server\" \"cd client && npm start\" "
   },

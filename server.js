@@ -5,7 +5,6 @@ const app = express();
 const users = require("./routes/user");
 const boards = require("./routes/board");
 const lists = require("./routes/list");
-
 const notifications = require("./routes/notification");
 const passport = require("passport");
 const cors = require("cors");
@@ -27,10 +26,13 @@ app.all("*", (req, res, next) => {
   });
   next();
 });
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
-const port = process.env.PORT || 7000;
-app.listen(port, (err) => {
+const PORT = process.env.PORT || 7000;
+app.listen(PORT, (err) => {
   err
     ? console.log(err)
-    : console.log(`the server is running on port http://localhost:${port}`);
+    : console.log(`the server is running on port http://localhost:${PORT}`);
 });
