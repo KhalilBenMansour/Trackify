@@ -11,7 +11,7 @@ const NavBar = () => {
       {isAuth ? (
         <nav className="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top">
           <div className="container">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/boards">
               Trackify
             </Link>
 
