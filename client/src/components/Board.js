@@ -13,18 +13,19 @@ import { editList } from "../JS/actions/listAction";
 import Loader from "./Loader";
 
 const Board = () => {
+  const [editable, setEditable] = useState(false);
+  const [boardTitle, setBoardTitle] = useState("");
+  const { currentBoard } = useSelector((state) => state.boardReducer);
+  const dispatch = useDispatch();
+
   const { id } = useParams();
 
   const { listLoading, lists } = useSelector((state) => state.listReducer);
-  const { currentBoard } = useSelector((state) => state.boardReducer);
-
-  const [editable, setEditable] = useState(false);
-  const [boardTitle, setBoardTitle] = useState("");
-  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchBoardById(id));
     dispatch(fetchListsFromBoard(id));
+    // setBoardTitle(currentBoard.name);
   }, [id, dispatch]);
 
   const onDragEnd = (result) => {
@@ -63,13 +64,13 @@ const Board = () => {
     }
   };
   const handleEditBoard = () => {
-    const text = boardTitle.trim();
+    const text = boardTitle;
     if (text === "") {
       setBoardTitle(currentBoard.name);
       return;
     }
     setEditable(false);
-    dispatch(editBoard(id, { name: text }));
+    dispatch(editBoard(id, { name: boardTitle }));
     currentBoard.name = boardTitle;
   };
 

@@ -56,6 +56,7 @@ const userReducer = (state = initialState, { type, payload }) => {
         isAuth: true,
         loginSuccess: true,
         loginRequest: false,
+        loginError: "",
       };
     case GET_PROFILE_SUCCESS:
       return { ...state, loading: false, user: payload, isAuth: true };
