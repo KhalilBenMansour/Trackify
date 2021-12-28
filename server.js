@@ -19,10 +19,6 @@ app.use("/api/boards", boards);
 app.use("/api/lists", lists);
 app.use("/api/notifications", notifications);
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-
 app.all("*", (req, res, next) => {
   res.status(404).json({
     status: "false",
@@ -30,6 +26,10 @@ app.all("*", (req, res, next) => {
   });
   next();
 });
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 const PORT = process.env.PORT || 7000;
 app.listen(PORT, (err) => {

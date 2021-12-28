@@ -20,7 +20,7 @@ const UserLogin = () => {
   useEffect(() => {
     if (!loginRequest && loginSucces) {
       setSuccess(true);
-    } else if (!loginRequest && !loginSucces) {
+    } else if (!loginRequest && !loginSucces && loginError) {
       setSuccess(false);
       alert(loginError.msg);
     }
