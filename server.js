@@ -11,7 +11,7 @@ const cors = require("cors");
 
 app.use(passport.initialize());
 app.use(express.json());
-// app.use(cors());
+app.use(cors());
 connectDB();
 
 app.use("/api/users", users);
@@ -19,16 +19,11 @@ app.use("/api/boards", boards);
 app.use("/api/lists", lists);
 app.use("/api/notifications", notifications);
 
-app.all("*", (req, res, next) => {
-  res.status(404).json({
-    status: "false",
-    message: "page not found",
-  });
-  next();
-});
-
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
 }
 
 const PORT = process.env.PORT || 5000;
