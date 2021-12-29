@@ -12,7 +12,7 @@ import {
 } from "../constants/actionsTypes";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/api/users/";
+const BASE_URL = "/api/users/";
 //User register action creator
 export const userRegister = (newUser) => async (dispatch) => {
   dispatch({ type: USER_REGISTER_REQUEST });

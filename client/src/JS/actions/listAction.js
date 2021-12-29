@@ -11,7 +11,7 @@ import {
   DELETE_LIST_FAILED,
 } from "../constants/actionsTypes";
 
-const BASE_URL = "http://localhost:5000/api/lists";
+const BASE_URL = "/api/lists";
 
 // create new list on board
 export const postList = (list) => async (dispatch) => {

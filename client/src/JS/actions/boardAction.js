@@ -20,7 +20,7 @@ import {
   DELETE_BOARD_FAILED,
 } from "../constants/actionsTypes";
 
-const BASE_URL = "http://localhost:5000/api/boards";
+const BASE_URL = "/api/boards";
 
 // get all boards for user
 export const fetchBoards = () => async (dispatch) => {
