@@ -8,6 +8,7 @@ const lists = require("./routes/list");
 const notifications = require("./routes/notification");
 const passport = require("passport");
 const cors = require("cors");
+const path = require("path");
 
 app.use(passport.initialize());
 app.use(express.json());
