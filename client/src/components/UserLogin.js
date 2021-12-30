@@ -10,21 +10,22 @@ const UserLogin = () => {
   const [success, setSuccess] = useState(false);
 
   const dispatch = useDispatch();
-  const { loading, isAuth, loginRequest, loginSucces, loginError } =
-    useSelector((state) => state.userReducer);
+  const { loading, isAuth, loginSucces, loginError } = useSelector(
+    (state) => state.userReducer
+  );
 
   useEffect(() => {
     document.title = `Login | Trackify`;
   }, []);
 
   useEffect(() => {
-    if (!loginRequest && loginSucces) {
+    if (loginSucces) {
       setSuccess(true);
-    } else if (!loginRequest && !loginSucces && loginError) {
+    } else if (loginError) {
       setSuccess(false);
       alert(loginError.msg);
     }
-  }, [loginError]);
+  }, [loginError, loginSucces]);
 
   const login = (e) => {
     const cred = { email, password };

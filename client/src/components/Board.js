@@ -25,8 +25,11 @@ const Board = () => {
   useEffect(() => {
     dispatch(fetchBoardById(id));
     dispatch(fetchListsFromBoard(id));
-    // setBoardTitle(currentBoard.name);
   }, [id, dispatch]);
+
+  useEffect(() => {
+    setBoardTitle(currentBoard.name);
+  }, [currentBoard]);
 
   const onDragEnd = (result) => {
     const { destination, source, draggableId, type } = result;
@@ -64,8 +67,7 @@ const Board = () => {
     }
   };
   const handleEditBoard = () => {
-    const text = boardTitle;
-    if (text === "") {
+    if (boardTitle === "") {
       setBoardTitle(currentBoard.name);
       return;
     }

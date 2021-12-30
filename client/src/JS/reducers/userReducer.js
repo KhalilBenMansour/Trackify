@@ -17,6 +17,7 @@ const initialState = {
   registerSuccess: false,
   loginRequest: true,
   loginSuccess: false,
+  loginError: "",
 };
 const userReducer = (state = initialState, { type, payload }) => {
   switch (type) {
