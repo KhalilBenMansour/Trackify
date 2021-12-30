@@ -58,22 +58,6 @@ const getlistsOfBoard = async (req, res) => {
   }
 };
 
-// get cards by boardId for a user
-const getCardsOfBoard = async (req, res) => {
-  const { id } = req.params;
-
-  try {
-    const board = await Board.findOne({ _id: id, userId: req.user });
-    if (!board) {
-      return res.status(404).json({ success: false, msg: "Board Not Found" });
-    }
-    const cards = await Card.find({ boardId: id });
-    res.status(200).send(cards);
-  } catch (error) {
-    res.status(400).json({ msg: "failed to get cards", error });
-  }
-};
-
 // update board by boardId for a user
 const updateBoard = async (req, res) => {
   const _id = req.params.id;
@@ -136,7 +120,6 @@ module.exports = {
   getBoards,
   getBoard,
   getlistsOfBoard,
-  getCardsOfBoard,
   updateBoard,
   getNotifications,
   deleteBoard,
