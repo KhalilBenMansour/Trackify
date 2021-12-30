@@ -30,6 +30,7 @@ export const userLogin = (userCred) => async (dispatch) => {
     const res = await axios.post(`${BASE_URL}login`, userCred);
     localStorage.setItem("token", res.data.token);
     dispatch({ type: USER_LOGIN_SUCCESS, payload: res.data });
+    window.location.assign("/boards");
   } catch (error) {
     dispatch({ type: USER_LOGIN_FAILED, payload: error.response.data });
   }
