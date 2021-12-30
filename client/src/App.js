@@ -29,7 +29,7 @@ function App() {
           <Route path="" element={<Boards />} />
           <Route path="/boards/:id" element={<Board />} />
         </Route>
-        <Route path="/*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
