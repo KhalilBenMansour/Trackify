@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getProfile());
-  }, [isAuth]);
+  }, [dispatch, isAuth]);
 
   return (
     <div className="App">

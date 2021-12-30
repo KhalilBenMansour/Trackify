@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate } from "react-router";
 import { userLogin } from "../JS/actions/userAction";
 import Loader from "./Loader";
 
@@ -9,11 +8,18 @@ const UserLogin = () => {
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
-  const { loading, loginError } = useSelector((state) => state.userReducer);
+  const { loading, loginError, isAuth } = useSelector(
+    (state) => state.userReducer
+  );
 
   useEffect(() => {
     document.title = `Login | Trackify`;
   }, []);
+
+  //To redirect the user if he is already logged in
+  useEffect(() => {
+    isAuth && window.location.assign("/boards");
+  }, [isAuth]);
 
   useEffect(() => {
     if (loginError) {
