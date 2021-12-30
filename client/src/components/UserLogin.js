@@ -37,8 +37,6 @@ const UserLogin = () => {
 
   return loading ? (
     <Loader />
-  ) : isAuth ? (
-    <Navigate replace to="/boards" />
   ) : (
     <div className="auth-wrapper">
       <div className="auth-inner">
