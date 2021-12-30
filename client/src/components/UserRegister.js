@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { userRegister } from "../JS/actions/userAction";
 import Loader from "./Loader";
 
@@ -8,7 +8,6 @@ const UserRegister = () => {
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [success, setSuccess] = useState(false);
 
   const { loading, registerRequest, registerSuccess, msg, registerError } =
     useSelector((state) => state.userReducer);
@@ -20,13 +19,11 @@ const UserRegister = () => {
 
   useEffect(() => {
     if (!registerRequest && registerSuccess) {
-      setSuccess(true);
       alert(msg);
     } else if (!registerRequest && !registerSuccess) {
-      setSuccess(false);
       alert(registerError);
     }
-  }, [registerRequest, registerSuccess, registerError]);
+  }, [registerRequest, registerSuccess, registerError, msg]);
 
   const register = (e) => {
     const newUser = { username, email, password };

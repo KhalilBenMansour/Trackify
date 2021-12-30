@@ -19,6 +19,7 @@ export const userRegister = (newUser) => async (dispatch) => {
   try {
     const res = await axios.post(`${BASE_URL}register`, newUser);
     dispatch({ type: USER_REGISTER_SUCCESS, payload: res.data });
+    window.location.replace("/");
   } catch (error) {
     dispatch({ type: USER_REGISTER_FAILED, payload: error.response.data });
   }

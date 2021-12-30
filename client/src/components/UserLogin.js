@@ -7,25 +7,19 @@ import Loader from "./Loader";
 const UserLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [success, setSuccess] = useState(false);
 
   const dispatch = useDispatch();
-  const { loading, isAuth, loginSucces, loginError } = useSelector(
-    (state) => state.userReducer
-  );
+  const { loading, loginError } = useSelector((state) => state.userReducer);
 
   useEffect(() => {
     document.title = `Login | Trackify`;
   }, []);
 
   useEffect(() => {
-    if (loginSucces) {
-      setSuccess(true);
-    } else if (loginError) {
-      setSuccess(false);
+    if (loginError) {
       alert(loginError.msg);
     }
-  }, [loginError, loginSucces]);
+  }, [loginError]);
 
   const login = (e) => {
     const cred = { email, password };
